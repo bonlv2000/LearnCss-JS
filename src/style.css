@@ -1,0 +1,569 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+  color: white;
+  font-family: "Poppins", sans-serif;
+}
+
+.navbar {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 3% 5%;
+  z-index: 10;
+}
+
+.navbar__brand {
+  width: 100px;
+  height: 100%;
+}
+
+.brand__logo {
+  width: 100%;
+  height: 100%;
+}
+
+.language__drop__down {
+  background: transparent;
+  border: none;
+  color: white;
+}
+
+.language__drop__down:focus {
+  outline: none;
+}
+
+.dropdown__container {
+  border: 1px solid white;
+  padding: 0.4rem;
+  border-radius: 4px;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.signin__button {
+  background-color: red;
+  border: 1px solid red;
+  color: white;
+  padding: 0.25rem 0.5rem;
+  border-radius: 2px;
+}
+
+.navbar__nav__items {
+  display: flex;
+  gap: 10px;
+}
+
+.hero__bg__image_container {
+  width: 100%;
+  height: 80vh;
+}
+
+.hero__bg__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero__bg__overlay {
+  position: absolute;
+  /* //inset is set all: top bottom right left = 0 */
+  inset: 0;
+  width: 100%;
+  height: 80vh;
+  background: rgba(0, 0, 0, 0.4);
+  background-image: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.8) 0,
+    rgba(0, 0, 0, 0) 60%,
+    rgba(0, 0, 0, 0.8) 100%
+  );
+}
+
+.hero__crad {
+  position: absolute;
+  top: 20%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.hero__title {
+  font-weight: 700;
+  font-size: 1.7rem;
+}
+
+.hero__subtitle,
+.hero__subscription {
+  font-weight: 400;
+  font-size: 1.2rem;
+}
+
+.hero__subscription {
+  margin: 0 20px;
+}
+
+.email__input {
+  background: transparent;
+  border: none;
+  width: 100%;
+  height: 100%;
+  padding-left: 3%;
+}
+
+.email__label {
+  color: black;
+  position: absolute;
+  top: 28%;
+  left: 3%;
+  color: rgb(153, 149, 149);
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.form__container {
+  background-color: white;
+  width: 90%;
+  height: 45px;
+  position: relative;
+}
+
+.email__form__container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.email__input:focus + .email__label {
+  top: 0.2rem;
+  font-size: 10px;
+}
+
+.email__input:not(:placeholder-shown).email__input:not(:focus) + .email__label {
+  top: 0.2rem;
+  font-size: 10px;
+}
+
+.email__input:focus-visible {
+  outline: none;
+}
+
+.primary__button {
+  background-color: rgb(235, 14, 14);
+  border: 1px solid rgb(235, 14, 14);
+  color: white;
+  padding: 0.6rem 0.8rem;
+  border-radius: 3px;
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+
+.feature {
+  border-top: 8px solid #222;
+  padding: 2rem 1rem;
+}
+
+.feature__details {
+  text-align: center;
+}
+
+.feature__title {
+  font-size: 26px;
+  font-weight: 600;
+  margin: 10px 0;
+}
+
+.feature__sub__title {
+  font-weight: 500;
+}
+
+.feature__img__container {
+  position: relative;
+  width: 100%;
+}
+
+.feature__img {
+  width: 100%;
+}
+
+.feature__backgroup__video__container {
+  position: absolute;
+  top: 20%;
+  left: 13%;
+  width: 100%;
+  height: 100%;
+  max-width: 73%;
+  max-height: 53%;
+  z-index: -1;
+}
+
+.feature__backgroup__video {
+  width: 100%;
+}
+
+.feature__2__poster__container {
+  position: absolute;
+  bottom: 8%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 16em;
+  display: flex;
+  align-items: center;
+  background-color: black;
+  border: 1px solid rgb(121, 98, 98);
+  border-radius: 8px;
+  height: 60px;
+  padding: 0.25rem 0.6rem;
+  gap: 15px;
+}
+
+.poster__container {
+  width: 15%;
+}
+
+.poster {
+  width: 100%;
+  height: 100%;
+}
+
+.poster__details {
+  width: 60%;
+}
+
+.poster__details > h4 {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.poster__details > h6 {
+  font-size: 11px;
+  font-weight: 500;
+  color: #0071eb;
+}
+
+.download__gif {
+  width: 20%;
+  height: 100%;
+}
+
+.gif {
+  width: 100%;
+  height: 100%;
+}
+
+.feature__3__backgroup__video__container {
+  max-width: 63%;
+  max-height: 47%;
+  z-index: -2;
+  top: 9%;
+  left: 19%;
+}
+
+.FAQ__list__container {
+  border-top: 8px solid #222;
+  padding: 2rem 0;
+}
+
+.FAQ__accordian {
+  width: 100%;
+}
+
+.FAQ__title {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 20px;
+  font-size: 18px;
+  background-color: #303030;
+  border: 1px solid #303030;
+  color: white;
+}
+
+.FAQ__heading {
+  text-align: center;
+  font-weight: 600;
+  font-size: 24px;
+  margin: 1rem 3rem;
+}
+
+.FAQ__list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 7px;
+}
+
+.FAQ__visible {
+  background-color: #303030;
+  border-top: 1px solid black;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-in-out;
+}
+
+.FAQ__visible > p {
+  padding: 1rem 1.5rem;
+}
+
+.FAQ__get__started__email {
+  text-align: center;
+}
+
+.FAQ__get__started__email > h3 {
+  font-weight: 400;
+  font-size: 18px;
+  margin: 2rem 0;
+}
+
+footer {
+  border-top: 8px solid #222;
+  padding: 2rem 0 0 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer__row__1 > a > span {
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.footer__row__2 {
+  padding: 1rem 0 1rem;
+}
+
+.footer_column {
+  font-size: 12.5px;
+  font-weight: 400;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: #757575;
+}
+
+.item_column {
+  list-style-type: none;
+  color: #757575;
+  width: 40%;
+}
+
+.footer__row__3 > .dropdown__container {
+  width: fit-content;
+  border: 1px solid #757575;
+  color: #757575;
+  padding: 1rem 1rem;
+  width: 40%;
+  height: 100%;
+}
+
+.footer__row__3 > .dropdown__container > .language__drop__down {
+  color: #757575;
+  font-size: 15px;
+}
+
+.footer__row__4 {
+  padding-bottom: 2rem;
+}
+
+.footer__row__4 > span {
+  font-size: 15px;
+}
+
+@media (min-width: 768px) {
+  .hero__bg__image_container {
+    height: 100vh;
+  }
+
+  .hero__bg__overlay {
+    height: 100vh;
+  }
+
+  .hero__crad {
+    top: 40%;
+    left: 30%;
+    transform: translate(-20%, -20%);
+  }
+
+  .hero__title {
+    font-size: 3rem;
+  }
+
+  .hero__subtitle,
+  .hero__subscription {
+    font-size: 1.4rem;
+  }
+
+  .feature__title {
+    font-size: 38px;
+  }
+
+  .feature__sub__title {
+    font-size: 19px;
+  }
+
+  .feature {
+    padding: 3rem 2rem;
+  }
+
+  .feature__2__poster__container {
+    max-width: 25em;
+    height: 80px;
+  }
+
+  .poster__container {
+    width: 13%;
+  }
+
+  .poster__details > h4 {
+    font-size: 15px;
+  }
+
+  .poster__details > h6 {
+    font-size: 14px;
+  }
+
+  .download__gif__container {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .FAQ__list {
+    padding: 1rem 5rem;
+  }
+
+  .FAQ__heading {
+    font-size: 38px;
+    letter-spacing: 1px;
+    font-weight: 500;
+  }
+
+  .FAQ__title {
+    font-size: 20px;
+  }
+
+  .FAQ__get__started__email {
+    width: 75%;
+    transform: translateX(16%);
+  }
+
+  footer {
+    padding: 3rem 1rem 0 5rem;
+  }
+
+  .item_column {
+    width: 20%;
+    gap: 30px;
+  }
+
+  .footer__row__3 > .dropdown__container {
+    width: 20%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .navbar {
+    padding: 2% 4%;
+  }
+
+  .navbar__brand {
+    width: 180px;
+  }
+
+  .signin__button {
+    padding: 0.4rem 1rem;
+    font-size: 18px;
+  }
+
+  .dropdown__container {
+    padding: 0.4rem 0.4rem;
+  }
+
+  .navbar__nav__items {
+    gap: 30px;
+  }
+
+  .hero__crad {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .email__form__container {
+    flex-direction: row;
+    align-items: center;
+    gap: 1px;
+  }
+
+  .form__container {
+    width: 50%;
+  }
+
+  .primary__button {
+    height: 47px;
+  }
+
+  .feature {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 4rem 8rem;
+  }
+
+  .feature__details {
+    text-align: left;
+    padding: 0 6rem;
+  }
+
+  .feature__title {
+    font-size: 45px;
+  }
+
+  .feature__sub__title {
+    font-size: 26px;
+  }
+
+  .feature__img__container {
+    max-width: 500px;
+  }
+
+  .feature:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+
+  .feature__2__poster__container {
+    max-width: 21em;
+    height: 100px;
+    padding: 10px;
+  }
+
+  .poster__container {
+    width: 20%;
+  }
+
+  .FAQ__list {
+    padding: 1rem 22rem;
+  }
+
+  footer {
+    padding: 2rem 3rem 0 20rem;
+  }
+}
+
+@media (min-width: 1254px) {
+}
